@@ -1,0 +1,76 @@
+/* styles.css */
+
+/* Barra de navegación */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #f3f3f3;
+}
+
+/* Logo de LinkedIn */
+.logo img {
+    max-width: 41px;
+    height: auto;
+}
+
+.search-icon {
+    display: none; /* Oculta inicialmente el ícono de lupa */
+    cursor: pointer;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    flex-grow: 1;
+    margin: 0 15px;
+    max-width: 300px; /* Establece un ancho máximo para la barra de búsqueda */
+    margin-right: auto;
+   
+}
+
+/* Input de búsqueda */
+.search-bar input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #edf3f8;
+    border-radius: 4px;
+}
+
+/* Media query para ocultar la barra de búsqueda y mostrar el ícono en pantallas pequeñas */
+@media (max-width: 800px) {
+    .search-bar input {
+        display: none; /* Oculta la barra de búsqueda */
+    }
+
+    .search-icon {
+        display: block; /* Muestra el ícono */
+        /* Ajustes adicionales para el tamaño y alineación del ícono */
+        max-width: 50px; /* Ajusta esto según el tamaño deseado */
+        height: auto; /* Mantiene la proporción del ícono */
+    }
+}
+/* Ítems de navegación */
+
+.nav-items .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px; /* Ajusta según el espaciado deseado */
+}
+
+.nav-items img {
+    width: 40px; /* O el tamaño que tengan tus íconos */
+    height: auto;
+}
+
+.nav-items .nav-text {
+    font-size: 12px; /* Ajusta el tamaño del texto según necesites */
+    color: black; /* O el color que prefieras */
+}
+
+
+/* Hover en ítems de navegación */
+.nav-items a:hover {
+    background-color: #46637f;
+}
