@@ -1,30 +1,51 @@
 /* styles.css */
 
 /* Barra de navegación */
+body {
+    min-width: 550px; /* o cualquier otro valor que prefieras */
+}
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0 20px;
     background-color: #f3f3f3;
 }
 
+.left-container,
+.center-container,
+.right-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.center-container{
+    flex: 2; /* Permite que la barra de búsqueda crezca más que los otros contenedores */
+    max-width: 300px; /* Rango máximo para la barra de búsqueda */
+}
+
+
 /* Logo de LinkedIn */
 .logo img {
-    max-width: 41px;
-    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 40px;
 }
 
 .search-icon {
     display: none; /* Oculta inicialmente el ícono de lupa */
     cursor: pointer;
+   
 }
 
 /* Barra de búsqueda */
 .search-bar {
     flex-grow: 1;
     margin: 0 15px;
-    max-width: 300px; /* Establece un ancho máximo para la barra de búsqueda */
+    max-width: 200px; /* Establece un ancho máximo para la barra de búsqueda */
     margin-right: auto;
    
 }
@@ -37,8 +58,89 @@
     border-radius: 4px;
 }
 
+
+/* Ítems de navegación */
+
+/* Estilos para el contenedor de los elementos de navegación */
+.nav-items {
+    display: flex;
+    align-items: center; /* Alinea los ítems verticalmente */
+    margin-right: auto;
+}
+
+/* Estilos para cada ítem de navegación */
+.nav-item {
+    display: flex;
+    flex-direction: column; /* Alinea el ícono y el texto del ítem verticalmente */
+    align-items: center; /* Centra el ícono y el texto horizontalmente dentro del ítem */
+    margin-right: 20px; /* Espacio entre los ítems de navegación */
+}
+
+.nav-items .nav-item:first-child {
+    margin-left: 30px; 
+}
+
+/* Efecto hover para oscurecer los ítems */
+.nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Color de fondo ligeramente oscurecido */
+    border-radius: 4px;
+}
+
+.nav-item img {
+    width: 35px; /* Tamaño del ícono */
+    height: auto;
+    transition: filter 0.3s;
+}
+
+/* Efecto hover para los íconos */
+.nav-item:hover img {
+    filter: brightness(70%); /* Oscurece el ícono */
+}
+
+
+.nav-item .nav-text {
+    font-size: 12px; /* Tamaño del texto */
+    text-align: center; /* Asegura que el texto esté centrado debajo del ícono */
+    color: black; /* Color del texto */
+    transition: color 0.3s;
+}
+
+/* Efecto hover para el texto */
+.nav-item:hover .nav-text {
+    color: #333; /* Oscurece el texto */
+}
+
+/* Hover en ítems de navegación */
+.nav-items a:hover {
+    background-color: #46637f;
+}
+
 /* Media query para ocultar la barra de búsqueda y mostrar el ícono en pantallas pequeñas */
-@media (max-width: 800px) {
+@media (max-width: 700px) {
+
+    .nav-container {
+        justify-content: flex-start; /* Distribuye los elementos en pantallas pequeñas */
+        align-items: center;
+    }
+   
+    .center-container{
+        max-width: 40px;
+;
+    }
+    
+    .right-container {
+        align-items: right;
+    }
+
+    .logo {
+        margin-left: 10px; /* Margen mínimo a la izquierda */
+        margin-right: 10px; /* Margen mínimo a la derecha */
+    }
+
+    .search-bar {
+        max-width: 50px; 
+    }
+
     .search-bar input {
         display: none; /* Oculta la barra de búsqueda */
     }
@@ -48,29 +150,16 @@
         /* Ajustes adicionales para el tamaño y alineación del ícono */
         max-width: 50px; /* Ajusta esto según el tamaño deseado */
         height: auto; /* Mantiene la proporción del ícono */
+        margin-left: 5px;
+        margin-right: 5px;
     }
-}
-/* Ítems de navegación */
-
-.nav-items .nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 10px; /* Ajusta según el espaciado deseado */
-}
-
-.nav-items img {
-    width: 40px; /* O el tamaño que tengan tus íconos */
-    height: auto;
-}
-
-.nav-items .nav-text {
-    font-size: 12px; /* Ajusta el tamaño del texto según necesites */
-    color: black; /* O el color que prefieras */
-}
-
-
-/* Hover en ítems de navegación */
-.nav-items a:hover {
-    background-color: #46637f;
+    /* Aumenta el tamaño del ícono */
+    .nav-item img {
+        width: 40px; /* Nuevo tamaño del ícono */
+    }
+    
+    /* Oculta el texto */
+    .nav-item .nav-text {
+        display: none; /* Oculta el texto */
+    }
 }
