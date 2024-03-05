@@ -6,7 +6,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}/* Barra de navegación */
+}
+
+/* Barra de navegación - probando en 2do pc*/
 body {
     min-width: 550px; 
     margin-top: 60px; 
