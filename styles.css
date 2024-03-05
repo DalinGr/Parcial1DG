@@ -535,8 +535,11 @@ main .media .posts .post:hover{
     align-items: center;
     background: #fff;
     border-radius: 0.8rem;
-    height: 250px;
-    max-width: 300px;
+    height: 300px;
+    max-width: 800px;
+    position: fixed;
+    z-index: -5;
+    top: 5;
 
 }
 
@@ -546,11 +549,15 @@ main .media .posts .post:hover{
     height: auto;
     border-radius: 0.8rem;
     padding: 5%;
-    position: sticky; 
     top: 5;
-    z-index: 1000;
+    z-index: -5
 }
 
+.company-name {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+}
 
 .chat-container {
     position: fixed; /* Fija el chat en la pantalla */
