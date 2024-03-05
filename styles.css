@@ -3,12 +3,19 @@
 /* Barra de navegación */
 body {
     min-width: 550px; /* o cualquier otro valor que prefieras */
+    margin-top: 60px; 
 }
 .nav-container {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #f3f3f3;
+    position: fixed; /* Fija la posición en la parte superior */
+    top: 0; /* Alinea la barra de navegación en la parte superior de la pantalla */
+    left: 0; /* Alinea la barra de navegación a la izquierda de la pantalla */
+    width: 100%; /* Asegura que la barra se extienda por todo el ancho */
+    z-index: 1000; /* Asegura que la barra de navegación se mantenga por encima de otros elementos */
+    
 }
 
 .left-container,
@@ -115,8 +122,59 @@ body {
     background-color: #46637f;
 }
 
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr 300px; /* 300px para la sección fija y fracciones para las demás */
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+.section {
+    display: flex;
+    flex-direction: column; /* Para las secciones que tienen sub-secciones */
+    gap: 10px; /* Espacio entre sub-secciones */
+    height: 100px; /* Altura para las sub-secciones más pequeñas */
+    min-width: 30px;
+
+}
+
+.sub-section, .sub-section-long {
+    background-color: orange; /* Color de fondo para identificar las sub-secciones */
+}
+
+.sub-section {
+    height: 100px; /* Altura para las sub-secciones más pequeñas */
+}
+
+.sub-section-long {
+    height: 200px; /* Altura para las sub-secciones más largas */
+}
+
+.section-5.fixed-size {
+    background-color: blue; /* Color de fondo para la sección fija */
+    height: 80vh; /* Altura fija que ocupa toda la altura de la ventana */
+    width: 300px; /* Ancho fijo como se define en grid-template-columns */
+    position: fixed;
+    right: 0; /* Alinea el cuadro a la derecha de la pantalla */
+    bottom: 0; /* Alinea el cuadro en la parte inferior de la ventana */
+    margin-bottom: 30px;
+    z-index: 10; 
+    
+}
+
+.saludo {
+    color: white; /* Color del texto */
+    position: absolute; /* Posiciona el texto de forma absoluta dentro de la sección fija */
+    top: 0; /* Alinea el texto en la parte superior del cuadro azul */
+    left: 0; /* Alinea el texto a la izquierda del cuadro azul */
+    padding: 10px; /* Añade algo de espacio alrededor del texto */
+}
+
+/*----------------QUERY-------------------
+/*----------------QUERY-------------------
+/*----------------QUERY-------------------
+
 /* Media query para ocultar la barra de búsqueda y mostrar el ícono en pantallas pequeñas */
-@media (max-width: 700px) {
+@media (max-width: 600px) {
 
     .nav-container {
         justify-content: flex-start; /* Distribuye los elementos en pantallas pequeñas */
@@ -162,4 +220,18 @@ body {
     .nav-item .nav-text {
         display: none; /* Oculta el texto */
     }
+    .main-container {
+
+        display:flex;
+        gap: 0px;
+   }
+    .section-1, .section-2, .section-4, .section-5 {
+        display: none;
+    }
+    /* Asegúrate de que la sección 3 utilice todo el espacio disponible */
+    .section-3 {
+        width: 100%;
+    }
+
 }
+
