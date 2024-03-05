@@ -531,6 +531,88 @@ main .media .posts .post:hover{
     font-weight: 400;
 }
 
+.right_side .advertising {
+    align-items: center;
+    background: #fff;
+    border-radius: 0.8rem;
+    height: 250px;
+    max-width: 300px;
+
+}
+
+
+.right_side .advertising .ad-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.8rem;
+    padding: 5%;
+    position: sticky; 
+    top: 5;
+    z-index: 1000;
+}
+
+
+.chat-container {
+    position: fixed; /* Fija el chat en la pantalla */
+    right: 0; /* Alinea el chat a la derecha */
+    top: 5; /* Alinea el chat en la parte superior */
+    width: 300px; /* O el ancho que prefieras para tu chat */
+    height: 100%; /* O la altura que prefieras para tu chat */
+    background-color: #fff; /* O el color que prefieras */
+    border-radius: 0.8rem 0 0 0.8rem; /* Redondea las esquinas izquierdas */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    z-index: 1000; /* Asegura que el chat esté por encima de otros elementos */
+    overflow-y: auto; /* Permite el scroll dentro del chat si hay muchos mensajes */
+}
+
+.chat-header,
+.chat-search,
+.chat-tabs {
+    padding: 10px; /* Ajusta el padding como sea necesario */
+    border-bottom: 1px solid #eaeaea; /* Línea separadora */
+}
+
+.chat-tabs {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tab {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.tab.focused {
+    font-weight: bold;
+}
+
+.chat-list {
+    padding: 10px;
+}
+
+.chat-message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 40px; /* Ajusta el tamaño como sea necesario */
+    height: 40px; /* Ajusta el tamaño como sea necesario */
+    background-color: #ddd; /* Color de fondo para la imagen de perfil */
+    border-radius: 50%; /* Hace que la imagen de perfil sea redonda */
+    margin-right: 10px;
+}
+
+
+
+.message-preview p {
+    margin: 0;
+}
+
+
+
+
 .follow button.btn {
     background-color: white; 
     color: black; 
@@ -655,6 +737,12 @@ main .media .posts .post:hover{
 /*----------------QUERY-------------------*/
 
 
+@media (max-width: 1600px) {
+    .chat-container {
+        display: none;
+    }
+}
+
 @media (max-width: 1024px) {
     .container {
         grid-template-columns: 30% 70%; 
@@ -663,6 +751,7 @@ main .media .posts .post:hover{
     .right_side{
         display: none;
     }
+
 }
 
 /* Media query para ocultar la barra de búsqueda y mostrar el ícono en pantallas pequeñas */
