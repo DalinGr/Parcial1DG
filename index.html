@@ -1,109 +1,201 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>LinkedIn</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<header>
-    <div class="nav-container">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <title>LinkedIn - Feed</title>
+        <link rel="icon" type="image/svg+xml" href="assets\fat-chu.jpg" id="favicon-svg">
+    </head>
+    <header>
+        <div class="nav-container">
+            
+            <div class="left-container">
+                <div class="logo">
+                    <img src="assets/logoLI.png" alt="LinkedIn Logo">
+                </div>
+            </div>
         
-        <div class="left-container">
-            <div class="logo">
-                <img src="assets/logoLI.png" alt="LinkedIn Logo">
+
+            <div class="center-container">
+                <div class="search-bar">
+                        <input type="text" placeholder="Buscar">
+                        <img src="assets/iconos_09.png" alt="Buscar" class="search-icon">
+                </div>
+            </div>
+
+            <div class="right-container">
+                <div class="nav-items">
+                    <div class="nav-item">
+                        <img src="assets/iconos_home.png" alt="Home">
+                        <span class="nav-text">Home</span>
+                    </div>
+                    <div class="nav-item">
+                        <img src="assets/iconos_05.png" alt="My Network">
+                        <span class="nav-text">My Network</span>
+                    </div>
+                    <div class="nav-item">
+                        <img src="assets/iconos_15.png" alt="Jobs">
+                        <span class="nav-text">Jobs</span>
+                    </div>
+                    <div class="nav-item">
+                        <img src="assets/iconos_02.png" alt="Messaging">
+                        <span class="nav-text">Messaging</span>
+                    </div>
+                    <div class="nav-item">
+                        <img src="assets/iconos_18.png" alt="Notifications">
+                        <span class="nav-text">Notifications</span>
+                    </div>
+                    <div class="nav-item">
+                        <img src="assets/iconos_03.png" alt="Me">
+                        <span class="nav-text">Me</span>
+                    </div>
+
+                </div>
             </div>
         </div>
-    
+    </header>  
 
-        <div class="center-container">
-            <div class="search-bar">
-                    <input type="text" placeholder="Buscar">
-                    <img src="assets/iconos_09.png" alt="Buscar" class="search-icon">
+    <div class="container">
+        <aside>
+        <div class="sidebar">
+            <div class="top"></div>
+            <img src="assets\fat-chu.jpg" alt="" />
+
+            <div class="profile">
+            <a href="#">Dalin Grisales</a>
+            <small>Estudiante Ingenieria Multimedia</small>
+            <hr id="profile">
+            </div>
+            <div class="view">
+                <div class="views">
+                    <h6>Contactos</h6>
+                </div>
+                <div class="views">
+                    <h6>Amplia tu Red</h6>
+                </div>
+                <hr id="view">
+            </div>
+            <div class="premium">
+                <h6>Accede a información y herramientas exclusivas</h6>
+                <a href="#"><i class="fa-solid fa-box"></i>Probar Premium por 0 COP</a>
+                <hr id="premium">
+            </div>
+            <div class="items">
+            <i class="fa-solid fa-bookmark"></i>
+            <h6>Marcapáginas</h6>
+        </div>
+        </div>
+
+        <div class="reciente">
+            <div class="recent">
+                <h6>Grupos</h6>
+            </div>
+            <div class="groups">
+                <h5>Eventos</h5>
+            </div>
+            <div class="events">
+                <h6>Hashtags</h6>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="discover">
+                <a href="#">Ver más</a>
             </div>
         </div>
+        </aside>
+        
+        <main>
+        <div class="media">
+            <div class="search">
+                <img src="assets\fat-chu.jpg" alt="">
+                <input type="search" placeholder="Crear Publicación">
+            </div>
+            <div class="posts">
+                <div class="post">
+                    <i class="fa-solid fa-image"></i>
+                    <h5>Contenido Multimedia</h5>
+                </div>
+                <div class="post">
+                    <i class="fa-solid fa-video"></i>
+                    <h5>Evento</h5>
+                </div>
+                <div class="post">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <h5>Escribir artículo</h5>
+                </div>
+            </div>
+        </div>
+        <div class="recomendations">
+            <h5>Recomendaciones</h5>
+            <div class="r2">
+                <img id="d1" src="./img/d1.png" alt="">
+                <div>
+                <p>D1 S.A.S</p>
+                <small class="d1A">¡CALIDAD A PRECIOS MUY BAJOS!</small>
+                </div>
+                <div class="follow2">
+                <button class="btn">+ Seguir</button>
+                </div>   
+            </div>
+            <div class="r2">
+            <img id="d1" src="./img/eco.jfif" alt="">
+            <div>
+                <p>Ecopetrol</p>
+                <small class="d1A">Empresa • Petróleo y energía</small>
+            </div>
+            <div class="follow2">
+                <button class="btn">+ Seguir</button>
+            </div>   
+        </div>
+        <div class="r2">
+            <img id="d1" src="./img/google.jfif" alt="">
+            <div>
+            <p>Google</p>
+            <small class="d1A">Empresa • Software</small>
+            </div>
+            <div class="follow2">
+            <button class="btn">+ Seguir</button>
+            </div>   
+        </div>
+        </div>
+        </main>
 
-        <div class="right-container">
-            <div class="nav-items">
-                <div class="nav-item">
-                    <img src="assets/iconos_home.png" alt="Home">
-                    <span class="nav-text">Home</span>
+        <div class="right_side">
+            <div class="news">
+                <h4>Añadir a tu feed</h4>
+                <i class="fa-solid fa-circle-info"></i>
+            </div>
+            <div class="latest_news">
+                <div class="one">
+                <i class="fa-solid fa-circle"></i>
+                <h5>Ecopetrol</h5>
                 </div>
-                <div class="nav-item">
-                    <img src="assets/iconos_05.png" alt="My Network">
-                    <span class="nav-text">My Network</span>
+                <div class="two">
+                    <small>Empresa • Petróleo y energía</small>
+                    <div class="follow">
+                    <button class="btn">+ Seguir</button>
+                    </div>
                 </div>
-                <div class="nav-item">
-                    <img src="assets/iconos_15.png" alt="Jobs">
-                    <span class="nav-text">Jobs</span>
+            </div>
+            <div class="latest_news">
+            <div class="one">
+                <i class="fa-solid fa-circle"></i>
+                <h5>D1 S.A.S</h5>
+            </div>
+            <div class="two">
+                <small>¡CALIDAD A PRECIOS MUY BAJOS!</small>
+                <div class="follow">
+                    <button class="btn">+ Seguir</button>
                 </div>
-                <div class="nav-item">
-                    <img src="assets/iconos_02.png" alt="Messaging">
-                    <span class="nav-text">Messaging</span>
-                </div>
-                <div class="nav-item">
-                    <img src="assets/iconos_18.png" alt="Notifications">
-                    <span class="nav-text">Notifications</span>
-                </div>
-                <div class="nav-item">
-                    <img src="assets/iconos_03.png" alt="Me">
-                    <span class="nav-text">Me</span>
-                </div>
-
+            </div>
+        </div>
+            <div class="show_more">
+                <h5>Ver todas las recomendaciones</h5>
+                <i class="fa-solid fa-angle-down"></i>
             </div>
         </div>
     </div>
-</header>  
-
-<div class="main-container">
-    <div class="section section-1">
-        <!-- Contenido de la sección 1 -->
-    </div>
-    <div class="section section-2">
-        <div class="sub-section"> <!-- Sub-sección 2A -->
-            <!-- Contenido de la sub-sección 2A -->
-        </div>
-        <div class="sub-section"> <!-- Sub-sección 2B -->
-            <!-- Contenido de la sub-sección 2B -->
-        </div>
-    </div>
-    <div class="section section-3">
-        <div class="sub-section"> <!-- Sub-sección 3A -->
-            <!-- Contenido de la sub-sección 3A -->
-        </div>
-        <div class="sub-section"> <!-- Sub-sección 3B -->
-            <!-- Contenido de la sub-sección 3B -->
-        </div>
-    </div>
-    <div class="section section-4">
-        <div class="sub-section-long"> <!-- Sub-sección 4A -->
-            <!-- Contenido de la sub-sección 4A -->
-        </div>
-        <div class="sub-section-long"> <!-- Sub-sección 4B -->
-            <!-- Contenido de la sub-sección 4B -->
-        </div>
-        <div class="sub-section-long"> <!-- Sub-sección 4B -->
-            <!-- Contenido de la sub-sección 4B -->
-        </div>
-        <div class="sub-section-long"> <!-- Sub-sección 4B -->
-            <!-- Contenido de la sub-sección 4B -->
-        </div>
-        <div class="sub-section-long"> <!-- Sub-sección 4B -->
-            <!-- Contenido de la sub-sección 4B -->
-        </div>
-        <div class="sub-section-long"> <!-- Sub-sección 4B -->
-            <!-- Contenido de la sub-sección 4B -->
-        </div>
-        <div class="sub-section-long"> <!-- Sub-sección 4B -->
-            <!-- Contenido de la sub-sección 4B -->
-        </div>
-    </div>
-    <div class="section section-5 fixed-size">
-        <p class="saludo">Hola</p>  <!-- Contenido de la sección 5 -->
-    </div>
-</div>
-
-    <footer>
-        <!-- Barra inferior -->
-    </footer>
-</body>
-</html>
+    </body>
+    </html>
